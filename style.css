@@ -1,13 +1,6 @@
 /* Police de caractères */
 body {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-
-    /* Définir l'image de fond */
-    background-image: url('test.jpeg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;    
 }
 
 
