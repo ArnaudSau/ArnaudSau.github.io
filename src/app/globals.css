@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&family=DM+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg-primary: #0A0E1A;
+    --bg-secondary: #111827;
+    --bg-card: #1A2235;
+    --accent-green: #00C896;
+    --accent-red: #FF4757;
+    --accent-blue: #3B82F6;
+    --text-primary: #F1F5F9;
+    --text-muted: #94A3B8;
+    --border: #1E293B;
+  }
+
+  * {
+    border-color: var(--border);
+  }
+
+  body {
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: "DM Sans", sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "Sora", sans-serif;
+  }
+}
+
+@layer utilities {
+  .font-numeric {
+    font-family: "JetBrains Mono", monospace;
+  }
+
+  .glow-green {
+    box-shadow: 0 0 20px rgba(0, 200, 150, 0.15);
+  }
+
+  .glow-blue {
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.15);
+  }
+
+  .glow-red {
+    box-shadow: 0 0 20px rgba(255, 71, 87, 0.15);
+  }
+
+  .card-hover {
+    @apply transition-all duration-300 hover:scale-[1.02] hover:glow-blue;
+  }
+
+  .skeleton {
+    @apply animate-shimmer bg-gradient-to-r from-bg-card via-bg-secondary to-bg-card bg-[length:200%_100%] rounded;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-muted);
+}
